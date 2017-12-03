@@ -1,3 +1,3 @@
-# women-of-the-celtic-world
+# Women of the Celtic World
 
-holiday card/gift for friends
+Holiday card/gift for friends
