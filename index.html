@@ -9,59 +9,57 @@
 	</head>
 	<body>
 		<div class="container">
-			<img id="front-cover" class="cover click" src="cover-front.jpg" />
-			<div class="lower">
+			<img id="front-cover" class="cover open" src="cover-front.jpg" />
+			<div class="lower" data-open="false">
 				<div id="instructions">Right click on a track to download.</div>
 				<div class="songs">
 					<h4>1. Máire Brennan (of Clannad) - <span class="italic">Against the Wind</span></h4>
 					<audio data-track="1" controls src="audio/01-AgainstTheWind.m4a"></audio>
-
 					<h4>2. Máighread Ni Dhomhnaill - <span class="italic">Amhrán Pheddar Breathnach</span></h4>
 					<audio controls src="audio/02-AmhranPheadarBreathnach.m4a"></audio>
-
 					<h4>3. Mary Black - <span class="italic">Treasure Island</span></h4>
 					<audio controls src="audio/03-TreasureIsland.m4a"></audio>
-
 					<h4>4. Karen Matheson (of Capercaillie) - <span class="italic">Dark Alan (from Rob Roy)</span></h4>
 					<audio controls src="audio/04-DarkAlan-FromRobRoy.m4a"></audio>
-
 					<h4>5. Karen Matheson (of Capercaillie) - <span class="italic">Waiting For The Wheel To Turn</span></h4>
 					<audio controls src="audio/05-WaitingForTheWheelToTurn.m4a"></audio>
-
 					<h4>6. Máire Brennan (of Clannad) - <span class="italic">The Mighty One</span></h4>
 					<audio controls src="audio/06-TheMightyOne.m4a"></audio>
-
 					<h4>7. Connie Dover -  <span class="italic">In Aimsir Bhaint An Fheir</span></h4>
 					<audio controls src="audio/07-InAimsirBhaintAnFheir.m4a"></audio>
-
 					<h4>8. Máure Breatnach - <span class="italic">Breatnaigh Abu</span></h4>
 					<audio controls src="audio/08-BreatnaighAbu.m4a"></audio>
-
 					<h4>9. Maura O'Connell - <span class="italic">Stories</span></h4>
 					<audio controls src="audio/09-Stories.m4a"></audio>
-
 					<h4>10. Fiona Joyce - <span class="italic">Cry Over You</span></h4>
 					<audio controls src="audio/10-CryOverYou.m4a"></audio>
-
 					<h4>11. Nancy McCallion (of The Mollys) <span class="italic">On We Go</span></h4>
 					<audio controls src="audio/11-OnWeGo.m4a"></audio>
-
 					<h4>12. Máiread Ni Mhaonaigh (of Altan) -  <span class="italic">Dúlamán</span></h4>
 					<audio controls src="audio/12-Dulaman.m4a"></audio>
-
 					<h4>13. Mary Black - <span class="italic">Song For Ireland</span></h4>
 					<audio controls src="audio/13-SongForIreland.m4a"></audio>
 				</div>
-				<img id="back-cover" class="cover" src="cover-back.jpg" />
+				<img id="back-cover" class="cover open" src="cover-back.jpg" />
+				<div id="merry">* ~ Merriest Wishes and A Happy New Year ~ *</div>
+				<div class="about" id="elsa" class="click">* ~ xo <span id="elsa-link"><a href="http://elsa-brown.com" target="_blank">Elsa</a></span> ~ *</div>
 			</div>
-			<div id="enjoy" class="click">* ~ Click to Enjoy! ~ *</div>
+			<div id="enjoy" class="about open">* ~ Click to Enjoy! ~ *</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(() => {
-				$('.click').click(() => {
-					$('.lower').animate({
-						height: 'toggle', display: 'show'}, 5000);
+				let lower = $('.lower')
+				$('.open').click(() => {
+					if (lower.data('open') === false) {
+						lower.animate({height: '2000px', top: '0', opacity: '1'}, 1000).data('open', 'true');
+							$('#enjoy').hide().animate({opacity: 0});
+					}
+					else {
+						lower.animate({height: 0, opacity: 0, top: '100%'}, 1000).data('open', false);
+						$('#enjoy').delay(1000).show()
+						.animate({opacity: '1'}, 300, 'linear')
+					}
 				});
 			});
 	</script>
