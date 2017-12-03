@@ -1,0 +1,81 @@
+body {
+	background-color: green;
+	text-align: center;
+}
+
+h4 {
+	font-family: 'Courier', sans-serif;
+	font-weight: normal;
+	color: goldenrod;
+	font-size: 14px;
+	text-align: left;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.container {
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 70px;
+}
+
+#front-cover {
+	max-width: 500px;
+	padding-bottom: 5px;
+}
+
+.cover:hover {
+	cursor: pointer;
+}
+
+.cover:active {
+	transform: translate(2px, 2px);
+}
+
+.songs {
+	max-width: 460px;
+	text-align: left;
+	margin: 0 auto;
+	padding-left: 60px;
+	padding-bottom: 30px;
+}
+
+audio {
+	padding-bottom: 15px;
+	padding-left: 50px;
+}
+
+#back-cover {
+	max-width: 500px;
+}
+
+#enjoy {
+	margin: 0 auto;
+	margin-top: 40px;
+	color: goldenrod;
+	font-weight: bold;
+	max-width: 500px;
+}
+
+#enjoy:hover {
+	cursor: pointer;
+}
+
+#enjoy:active {
+	transform: translate(2px, 2px);
+  text-shadow: 2px 2px 2px red;
+}
+
+#instructions {
+	color: black;
+	font-family: 'Courier', sans-serif;
+	font-size: 12px;
+	line-height: 2rem;
+}
+
+.lower {
+	display: none;
+	height: 0;
+}
