@@ -20,7 +20,7 @@ h4 {
 }
 
 .container {
-	max-width: 850px;
+	max-width: 500px;
 	margin: 0 auto;
 	padding: 60px;
 }
@@ -39,16 +39,14 @@ h4 {
 }
 
 .songs {
-	max-width: 460px;
 	text-align: left;
 	margin: 0 auto;
-	padding-left: 60px;
 	padding-bottom: 30px;
+	max-width: 454px; 
 }
 
 audio {
 	padding-bottom: 15px;
-	padding-left: 50px;
 }
 
 #back-cover {

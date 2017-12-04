@@ -14,31 +14,31 @@
 				<div id="instructions">Right click on a track to download.</div>
 				<div class="songs">
 					<h4>1. Máire Brennan (of Clannad) - <span class="italic">Against the Wind</span></h4>
-					<audio data-track="1" controls src="audio/01-AgainstTheWind.m4a"></audio>
+						<audio id="audio-01" controls></audio>
 					<h4>2. Máighread Ni Dhomhnaill - <span class="italic">Amhrán Pheddar Breathnach</span></h4>
-					<audio controls src="audio/02-AmhranPheadarBreathnach.m4a"></audio>
+						<audio id="audio-02" controls></audio>
 					<h4>3. Mary Black - <span class="italic">Treasure Island</span></h4>
-					<audio controls src="audio/03-TreasureIsland.m4a"></audio>
+						<audio id="audio-03" controls></audio>
 					<h4>4. Karen Matheson (of Capercaillie) - <span class="italic">Dark Alan (from Rob Roy)</span></h4>
-					<audio controls src="audio/04-DarkAlan-FromRobRoy.m4a"></audio>
+						<audio id="audio-04" controls></audio>
 					<h4>5. Karen Matheson (of Capercaillie) - <span class="italic">Waiting For The Wheel To Turn</span></h4>
-					<audio controls src="audio/05-WaitingForTheWheelToTurn.m4a"></audio>
+						<audio id="audio-05" controls></audio>
 					<h4>6. Máire Brennan (of Clannad) - <span class="italic">The Mighty One</span></h4>
-					<audio controls src="audio/06-TheMightyOne.m4a"></audio>
-					<h4>7. Connie Dover -  <span class="italic">In Aimsir Bhaint An Fheir</span></h4>
-					<audio controls src="audio/07-InAimsirBhaintAnFheir.m4a"></audio>
+						<audio id="audio-06" controls></audio>
+					<h4>7. Connie Dover - <span class="italic">In Aimsir Bhaint An Fheir</span></h4>
+						<audio id="audio-07" controls></audio>
 					<h4>8. Máure Breatnach - <span class="italic">Breatnaigh Abu</span></h4>
-					<audio controls src="audio/08-BreatnaighAbu.m4a"></audio>
+						<audio id="audio-08" controls></audio>
 					<h4>9. Maura O'Connell - <span class="italic">Stories</span></h4>
-					<audio controls src="audio/09-Stories.m4a"></audio>
+						<audio id="audio-09" controls></audio>
 					<h4>10. Fiona Joyce - <span class="italic">Cry Over You</span></h4>
-					<audio controls src="audio/10-CryOverYou.m4a"></audio>
-					<h4>11. Nancy McCallion (of The Mollys) <span class="italic">On We Go</span></h4>
-					<audio controls src="audio/11-OnWeGo.m4a"></audio>
-					<h4>12. Máiread Ni Mhaonaigh (of Altan) -  <span class="italic">Dúlamán</span></h4>
-					<audio controls src="audio/12-Dulaman.m4a"></audio>
+						<audio id="audio-10" controls></audio>
+					<h4>11. Nancy McCallion (of The Mollys) - <span class="italic">On We Go</span></h4>
+						<audio id="audio-11" controls></audio>
+					<h4>12. Máiread Ni Mhaonaigh (of Altan) - <span class="italic">Dúlamán</span></h4>
+						<audio id="audio-12" controls></audio>
 					<h4>13. Mary Black - <span class="italic">Song For Ireland</span></h4>
-					<audio controls src="audio/13-SongForIreland.m4a"></audio>
+						<audio id="audio-13" controls></audio>
 				</div>
 				<img id="back-cover" class="cover open" src="cover-back.jpg" />
 				<div id="merry">* ~ Merriest Wishes and A Happy New Year ~ *</div>
@@ -52,12 +52,43 @@
 				let lower = $('.lower')
 				$('.open').click(() => {
 					if (lower.data('open') === false) {
-						lower.animate({height: '2000px', top: '0', opacity: '1'}, 1000).data('open', 'true');
-							$('#enjoy').hide()
+						lower.animate({height: '2000px', top: '0', opacity: '1'}, 1000)
+							.data('open', 'true');
+						$('#enjoy').hide();
+						$('#elsa').show();
+
+						$('#audio-01').attr('src', 'audio/01-AgainstTheWind.m4a')
+							.on('ended', (() => {$('#audio-02')[0].play()}));
+						$('#audio-02').attr('src', 'audio/02-AmhranPheadarBreathnach.m4a')
+							.on('ended', (() => {$('#audio-03')[0].play()}));
+						$('#audio-03').attr('src', 'audio/03-TreasureIsland.m4a')
+							.on('ended', (() => {$('#audio-04')[0].play()}));
+						$('#audio-04').attr('src', 'audio/04-DarkAlan-FromRobRoy.m4a')
+							.on('ended', (() => {$('#audio-05')[0].play()}));
+						$('#audio-05').attr('src', 'audio/05-WaitingForTheWheelToTurn.m4a')
+							.on('ended', (() => {$('#audio-06')[0].play()}));
+						$('#audio-06').attr('src', 'audio/06-TheMightyOne.m4a')
+							.on('ended', (() => {$('#audio-07')[0].play()}));
+						$('#audio-07').attr('src', 'audio/07-InAimsirBhaintAnFheir.m4a')
+							.on('ended', (() => {$('#audio-08')[0].play()}));
+						$('#audio-08').attr('src', 'audio/08-BreatnaighAbu.m4a')
+							.on('ended', (() => {$('#audio-09')[0].play()}));
+						$('#audio-09').attr('src', 'audio/09-Stories.m4a')
+							.on('ended', (() => {$('#audio-10')[0].play()}));
+						$('#audio-10').attr('src', 'audio/10-CryOverYou.m4a')
+							.on('ended', (() => {$('#audio-11')[0].play()}));
+						$('#audio-11').attr('src', 'audio/11-OnWeGo.m4a')
+							.on('ended', (() => {$('#audio-12')[0].play()}));
+						$('#audio-12').attr('src', 'audio/12-Dulaman.m4a')
+							.on('ended', (() => {$('#audio-13')[0].play()}));
+						$('#audio-13').attr('src', 'audio/13-SongForIreland.m4a');
+
+						$('#audio-01')[0].play();
 					}
 					else {
 						lower.animate({height: 0, opacity: 0, top: '100%'}, 1000).data('open', false);
-						$('#enjoy').delay(1200).show()
+						$('#enjoy').delay(1200).show();
+						$('audio').trigger('pause');
 					}
 				});
 			});
