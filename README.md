@@ -1,3 +1,3 @@
 # Women of the Celtic World
 
-Holiday card/gift for friends
+Audio holiday card for friends and family
