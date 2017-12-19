@@ -102,3 +102,45 @@ a {
 #elsa-link:hover {
 	text-decoration: underline;
 }
+
+@media screen and (max-width: 650px) {
+	.container {
+		padding: 40px;
+	}
+
+	#front-cover {
+		width: 100%;
+	}
+
+	audio {
+		width: 100%;
+	}
+
+	#back-cover {
+		width: 100%;
+	}
+
+	div {
+		overflow: none;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	#merry {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.container {
+		padding: 30px;
+	}
+
+	#instructions {
+		font-size: 10px;
+	}
+
+	#merry {
+		font-size: 11px;
+	}
+}
