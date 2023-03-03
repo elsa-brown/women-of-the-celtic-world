@@ -1,18 +1,24 @@
 body {
-	background-color: green;
+	background-color: #1A6B1A;
 	text-align: center;
-	color: goldenrod;
+	color: #FECF62;
+	margin: 0;
+}
+
+button {
+	background: none;
+	border: none;
+	color: #FECF62;
+	font-family: serif;
+	font-size: 16px;
+}
+
+img {
+	width: 100%;
 }
 
 div {
 	overflow: hidden;
-}
-
-h4 {
-	font-family: 'Courier', sans-serif;
-	font-weight: normal;
-	font-size: 14px;
-	text-align: left;
 }
 
 .italic {
@@ -20,9 +26,9 @@ h4 {
 }
 
 .container {
-	max-width: 500px;
 	margin: 0 auto;
-	padding: 60px;
+	max-width: 500px;
+	padding: 60px 10px 10px;
 }
 
 #front-cover {
@@ -39,14 +45,14 @@ h4 {
 }
 
 .songs {
+	font-family: 'Courier', sans-serif;
 	text-align: left;
 	margin: 0 auto;
-	padding-bottom: 30px;
-	max-width: 454px; 
+	margin-bottom: 30px;
 }
 
 audio {
-	padding-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 #back-cover {
@@ -62,10 +68,10 @@ audio {
 }
 
 #instructions {
-	color: black;
+	color: #d7e5e5;
 	font-family: 'Courier', sans-serif;
-	font-size: 12px;
-	line-height: 2rem;
+	font-size: 14px;
+	margin: 10px 0 30px;
 }
 
 .lower {
@@ -89,60 +95,15 @@ audio {
 #elsa {
 	margin-top: 10px;
 	margin-bottom: 50px;
-	font-size: 12px;
 	font-weight: normal;
 	font-family: 'Courier', sans-serif;
 }
 
 a {
-	text-decoration: none;
-	color: goldenrod;
-}
-
-#elsa-link:hover {
+	color: #FECF62;
 	text-decoration: underline;
 }
 
-/* mobile responsive styles */
-
-@media screen and (max-width: 650px) {
-	.container {
-		padding: 40px;
-	}
-
-	#front-cover {
-		width: 100%;
-	}
-
-	audio {
-		width: 100%;
-	}
-
-	#back-cover {
-		width: 100%;
-	}
-
-	div {
-		overflow: none;
-	}
-}
-
-@media screen and (max-width: 414px) {
-	#merry {
-		font-size: 13px;
-	}
-}
-
-@media screen and (max-width: 350px) {
-	.container {
-		padding: 30px;
-	}
-
-	#instructions {
-		font-size: 10px;
-	}
-
-	#merry {
-		font-size: 11px;
-	}
+a:hover {
+	text-decoration: none;
 }
